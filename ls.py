@@ -64,7 +64,6 @@ def acMain(ac_version):
     ac.setPosition(ls_pitch,3 ,210)
     ac.setPosition(ls_roll,3 ,240)
 
-
     return "ls"
 
 def acUpdate(deltaT):
