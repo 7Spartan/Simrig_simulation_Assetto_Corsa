@@ -89,8 +89,9 @@ def acUpdate(deltaT):
     if laps > lapcount:
         lapcount = laps
         ac.setText(ls_lapcount, "Laps: {}".format(lapcount))
+    
 
-    data = struct.pack('iffffff', info.physics.rpms, info.physics.velocity[2], info.physics.velocity[0], info.physics.velocity[1], info.physics.heading, info.physics.pitch, info.physics.roll)
+    data = struct.pack('fff', info.physics.heading, info.physics.pitch, info.physics.roll)
 
     sock.sendto(data,(UDP_IP, UDP_PORT))
 
